@@ -52,7 +52,6 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  let animationRef = useRef(null);
   useEffect(() => {}, [])
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
@@ -92,7 +91,6 @@ export const BentoGridItem = ({
         </div>
         { id === 6 && (
             <BackgroundGradientAnimation>
-                {/* <div className='absolute z-50 flex items-center justify-center text-white font-bold'></div> */}
             </BackgroundGradientAnimation>
         )}
         <div className={cn(titleClassName, 'group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10')}>
@@ -128,15 +126,14 @@ export const BentoGridItem = ({
             id === 6 && (
               <div className="mt-5 relative">
                 <div className="absolute -bottom-5 right-0">
-                  <Lottie options={{
+                  {/* <Lottie options={{
                     loop: copied,
                     autoplay: copied,
                     animationData: animationData,
                     rendererSettings: {
                       preserveAspectRatio: 'xMidYMid slice'
                     }
-                  }} />
-                  <div ref={animationRef}></div>
+                  }} /> */}
                 </div>
                 <MagicButton 
                   title={copied ? "Emaile copied" : 'Copy My Email'}
