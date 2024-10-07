@@ -1,8 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    output: "export",  // <=== enables static exports
-  reactStrictMode: true,
-  basePath: "/fyt-portfolio",
-};
-
-export default nextConfig;
+// @ts-check
+import { PHASE_DEVELOPMENT_SERVER } from 'next/constants'
+ 
+export default (phase) => {
+  const isDev = phase === PHASE_DEVELOPMENT_SERVER
+  /**
+   * @type {import('next').NextConfig}
+   */
+  const nextConfig = {
+    assetPrefix: isDev ? undefined : '/portfolio',
+  }
+  return nextConfig
+}
