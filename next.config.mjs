@@ -7,7 +7,7 @@ export default (/** @type {string} */ phase) => {
    * @type {import('next').NextConfig}
    */
   const nextConfig = {
-    assetPrefix: isDev ? undefined : 'portfolio',
+    assetPrefix: isDev ? undefined : '/portfolio/',
   }
   return nextConfig
 }
