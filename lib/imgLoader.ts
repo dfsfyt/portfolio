@@ -6,7 +6,6 @@ function normalizeSrc(src: string): string {
 
 function imgLoader({ src }: ImageLoaderPropsWithConfig): string {
   const baseUrl = process.env.NODE_ENV === "development" ? "/" : "portfolio/";
-  console.log(`${baseUrl}${normalizeSrc(src)}`)
   return `${baseUrl}${normalizeSrc(src)}`;
 }
 
