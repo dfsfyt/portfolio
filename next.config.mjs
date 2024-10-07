@@ -1,13 +1,8 @@
-// @ts-check
-import { PHASE_DEVELOPMENT_SERVER } from 'next/constants'
- 
-export default (/** @type {string} */ phase) => {
-  const isDev = phase === PHASE_DEVELOPMENT_SERVER
-  /**
-   * @type {import('next').NextConfig}
-   */
-  const nextConfig = {
-    assetPrefix: isDev ? undefined : '/portfolio/',
-  }
-  return nextConfig
-}
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    output: "export",  // <=== enables static exports
+  reactStrictMode: true,
+  basePath: "/portfolio",
+};
+
+export default nextConfig;
