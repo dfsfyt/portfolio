@@ -74,16 +74,18 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && 'flex justify-center'} h-full`}>
         <div className='w-full h-full absolute'>
             {img && (
-                <Image
+                // <img
+                <Image width={0} height={0}
                     src={img} 
                     alt={img}
-                    className={cn(imgClassName, 'object-center')}
+                    className={cn(imgClassName, 'object-center w-full')}
                 />
             )}
         </div>
         <div className={`absolute right-0 -bottom-5 ${id === 5 && 'w-full opacity-80'}`}>
             {spareImg && (
-                <Image
+                // <img
+                <Image width={0} height={0}
                     src={spareImg}
                     alt={spareImg}
                     className='object-cover object-center w-full h-full'
@@ -126,16 +128,16 @@ export const BentoGridItem = ({
           {
             id === 6 && (
               <div className="mt-5 relative">
-                <div className="absolute -bottom-5 right-0">
-                  {/* <Lottie options={{
+                {/* <div className="absolute -bottom-5 right-0">
+                  <Lottie options={{
                     loop: copied,
                     autoplay: copied,
                     animationData: animationData,
                     rendererSettings: {
                       preserveAspectRatio: 'xMidYMid slice'
                     }
-                  }} /> */}
-                </div>
+                  }} />
+                </div> */}
                 <MagicButton 
                   title={copied ? "Emaile copied" : 'Copy My Email'}
                   icon={<IoCopyOutline />}

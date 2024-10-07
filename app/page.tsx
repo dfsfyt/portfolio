@@ -2,12 +2,7 @@ import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNav";
-import MagicButton from "@/components/ui/MagicButton";
 import { navItems } from "@/data";
-import { list } from "postcss";
-import { useState } from "react";
-import { FaHome, FaUser } from "react-icons/fa";
-import { FaMessage } from "react-icons/fa6";
 
 export default function Home() {
   return (
